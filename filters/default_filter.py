@@ -9,3 +9,9 @@ def command_help():
              '/expenses_week -- Expenses on week\n' \
              '/expenses_day -- Expenses today'
     return string
+
+def command_categories():
+    string = '/food\n' \
+             '/tranport\n' \
+             '/other'
+    return string
