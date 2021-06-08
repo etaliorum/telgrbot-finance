@@ -2,7 +2,7 @@
 
 config.py
 
-BOT_TOKEN = ""
-DB = ""
-USER_DB = ""
+BOT_TOKEN = ""\
+DB = ""\
+USER_DB = ""\
 PASSWORD = ""
