@@ -1,1 +1,1 @@
-from . import connect_db, conf_parser
+from . import connect_db, conf_parser, query
