@@ -11,7 +11,7 @@ def connect():
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
         conn.commit()
-        cur.close
+        cur.close()
 
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
