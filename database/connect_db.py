@@ -2,9 +2,8 @@ import psycopg2
 from database.conf_parser import config
 
 
-def connect(sql, parametrs):
+def insert_db(sql, parametrs):
     conn = None
-
     try:
         params = config()
         print('Connecting to the PostgreSQL database...')
@@ -20,3 +19,7 @@ def connect(sql, parametrs):
         if conn is not None:
             conn.close()
             print('Database connection closed.')
+
+
+def get_db():
+    return None
