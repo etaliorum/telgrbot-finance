@@ -10,6 +10,6 @@ async def parse_message(string, user_id):
 
     for category in list_categories:
         if category in lst[0]:
-            insert_expenses(user_id, category, lst[1], dt)
+            insert_expenses([user_id, category, lst[1], dt])
             return 'Added'
     return 'Invalid arguments'

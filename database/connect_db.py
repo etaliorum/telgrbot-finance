@@ -2,7 +2,7 @@ import psycopg2
 from database.conf_parser import config
 
 
-def connect():
+def connect(sql, parametrs):
     conn = None
 
     try:
@@ -10,6 +10,7 @@ def connect():
         print('Connecting to the PostgreSQL database...')
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
+        cur.execute(sql, (*parametrs,))
         conn.commit()
         cur.close()
 
