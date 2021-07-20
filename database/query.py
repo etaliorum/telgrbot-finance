@@ -1,6 +1,6 @@
 import psycopg2
 from database.conf_parser import config
-from database.connect_db import insert_db
+from database.connect_db import insert_db, get_db
 
 
 def insert_expenses(data_list):
@@ -10,5 +10,5 @@ def insert_expenses(data_list):
 
 
 def get_expenses(id):
-    sql = """SELECT id, category, sum FROM expenses"""
-    return None
+    sql = """SELECT SUM(sum), category FROM expenses WHERE id=%s GROUP BY category"""
+    return get_db(sql, id)

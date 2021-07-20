@@ -3,12 +3,14 @@ def command_start():
              'show command /help'
     return string
 
+
 def command_help():
     string = '/categories - Show Categories\n' \
              '/expenses_month - Show expenses month\n' \
              '/expenses_week -- Expenses on week\n' \
              '/expenses_day -- Expenses today'
     return string
+
 
 def command_categories():
     string = '/food\n' \

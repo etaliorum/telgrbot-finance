@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from database.query import insert_expenses, get_expenses
+from database.query import insert_expenses
 
 
 async def parse_message(string, user_id):
