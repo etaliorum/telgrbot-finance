@@ -1,8 +1,15 @@
-Телеграм бот для учета финансов
+# Telegram bot for accounting finance
 
-config.py
+###_Example config.py file_
+**config.py**
 
-BOT_TOKEN = ""\
-DB = ""\
-USER_DB = ""\
-PASSWORD = ""
+BOT_TOKEN = "**Your Bot Token**"
+
+###_Example database.ini_
+**database.ini**
+
+[postgresql]\
+host=\
+database=\
+user=\
+password=\
