@@ -1,11 +1,11 @@
 # Telegram bot for accounting finance
 
-###_Example config.py file_
+###_Example config.py file_\
 **config.py**
 
 BOT_TOKEN = "**Your Bot Token**"
 
-###_Example database.ini_
+###_Example database.ini_\
 **database.ini**
 
 [postgresql]\
