@@ -4,7 +4,7 @@ from database.query import insert_expenses
 
 
 async def parse_message(string, user_id):
-    list_categories = ['food','transport','other']
+    list_categories = ['food', 'transport', 'other']
     lst = string.lower().split()
     dt = datetime.now(timezone.utc)
 
@@ -14,3 +14,10 @@ async def parse_message(string, user_id):
             return 'Added'
     return 'Invalid arguments'
 
+
+async def all_expenses(list_expenses):
+    string = ''
+    list_categories = ['food', 'transport', 'other']
+    for item in list_expenses:
+        string += f'In category {item[1]} you have been spent {item[0]} UAH\n'
+    return string
