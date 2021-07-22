@@ -17,7 +17,6 @@ async def parse_message(string, user_id):
 
 async def all_expenses(list_expenses):
     string = ''
-    list_categories = ['food', 'transport', 'other']
     for item in list_expenses:
         string += f'In category {item[1]} you have been spent {item[0]} UAH\n'
     return string
