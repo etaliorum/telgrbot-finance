@@ -2,14 +2,14 @@ import psycopg2
 from database.conf_parser import config
 
 
-def insert_db(sql, parametrs):
+def insert_db(sql, parameters):
     conn = None
     try:
         params = config()
         print('Connecting to the PostgreSQL database...')
         conn = psycopg2.connect(**params)
         cur = conn.cursor()
-        cur.execute(sql, (*parametrs,))
+        cur.execute(sql, (*parameters,))
         conn.commit()
         cur.close()
 
@@ -30,7 +30,6 @@ def get_db(sql, id):
         cur = conn.cursor()
         cur.execute(sql, (id,))
         result = cur.fetchall()
-        print(result)
         conn.commit()
         cur.close()
 
