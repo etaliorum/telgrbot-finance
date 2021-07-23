@@ -5,7 +5,10 @@ from filters.default_filter import command_start, command_help, command_categori
 
 @dp.message_handler(commands='start')
 async def cmd_start(message: types.Message):
-    await message.answer(command_start())
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    buttons = ['/get_expenses', '/insert_expense']
+    keyboard.add(*buttons)
+    await message.answer(command_start(), reply_markup=keyboard)
 
 
 @dp.message_handler(commands='help')
