@@ -9,6 +9,6 @@ def insert_expenses(data_list):
     insert_db(sql, data_list)
 
 
-def get_expenses(id):
+def get_query_expenses(id):
     sql = """SELECT SUM(sum), category FROM expenses WHERE id=%s GROUP BY category"""
     return get_db(sql, id)
