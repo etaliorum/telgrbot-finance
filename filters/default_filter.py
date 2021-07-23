@@ -1,6 +1,9 @@
 def command_start():
     string = 'Hello!, this is Bot for Accounting Finance\n' \
-             'show command /help'
+             'show command /help\n' \
+             'You can chose category and after enter your expense\n' \
+             'Or you can write example <food 300>'
+
     return string
 
 
